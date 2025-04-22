@@ -40,7 +40,7 @@ function checkWinner() {
             document.querySelectorAll(".box")[c].classList.add("winner");
             gameActive = false;
             statusText.textContent = `${cells[a]} Wins!`;
-            // return;
+            return;
         }
     }
 
@@ -61,6 +61,7 @@ function restartGame() {
     gameActive = true;
     currentPlayer = "X";
     statusText.textContent = "";
+    statusText.id = "status";
     createBoard();
 }
 
